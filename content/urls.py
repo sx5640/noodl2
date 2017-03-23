@@ -19,7 +19,7 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^(?P<source_name>\w+)$', views.source_detail, name='source_detail'),
-    url(r'^(?P<source_name>\w+)/article/(?P<article_id>\d+)$', views.article_detail, name='article_detail'),
+    url(r'^(?P<source_title>\w+)$', views.source_detail, name='source_detail'),
+    url(r'^(?P<source_title>\w+)/article/(?P<article_id>\d+)$', views.article_detail, name='article_detail'),
     
 ]

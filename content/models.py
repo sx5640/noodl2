@@ -10,7 +10,10 @@ class Source(models.Model):
     url = models.URLField(max_length = 400)
     rss = models.URLField(max_length = 400)
     creation_time = models.DateTimeField(auto_now_add = True)
-    last_update = models.DateTimeField()
+    last_update = models.DateTimeField(null = True)
+    
+    def __str__(self):
+        return self.title.replace('_', ' ').title()
     
 class Article(models.Model):
     
@@ -23,5 +26,6 @@ class Article(models.Model):
     publication_time = models.DateTimeField(auto_now_add = True)
     source = models.ForeignKey(Source, on_delete = models.CASCADE)
     
-    
+    def __str__(self):
+        return self.title.replace('_', ' ').title()    
         
