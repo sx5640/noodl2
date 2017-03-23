@@ -23,4 +23,5 @@ class Article(models.Model):
     publication_time = models.DateTimeField(auto_now_add = True)
     source = models.ForeignKey(Source, on_delete = models.CASCADE)
     
+    
         
