@@ -6,7 +6,7 @@ from django.db import models
 class Source(models.Model):
     
     #attributes
-    title = models.CharField(max_length = 200)
+    title = models.CharField(max_length = 200, db_index = True)
     url = models.URLField(max_length = 400)
     rss = models.URLField(max_length = 400)
     creation_time = models.DateTimeField(auto_now_add = True)
