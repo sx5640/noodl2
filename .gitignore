@@ -3,5 +3,13 @@ __pycache__
 *.db
 *.sqlite3
 
+*.egg-info/
+dist/
+
+lib/
+include/
+bin/
+local/
+
 *.wpr
 *.wpu
