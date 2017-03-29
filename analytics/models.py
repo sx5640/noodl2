@@ -5,7 +5,7 @@ from content.models import Article
 
 # Create your models here.
 class Keyword(models.Model):
-    name = models.CharField(max_length = 200, db_index = True, blank=False)
+    name = models.CharField(max_length = 200, db_index = True, blank=False, unique=True)
     articles = models.ManyToManyField(Article, through="KeywordAnalysis")
     
     def __str__(self):
